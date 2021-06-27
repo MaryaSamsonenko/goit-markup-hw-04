@@ -339,6 +339,30 @@ img {
 .team-profession {
   font-size: 16px;
   line-height: 1.18;
+
+  margin-bottom: 10px;
+}
+
+.team-sosial-item {
+  display: inline-flex;
+}
+
+.team-sosial-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50px;
+
+  fill: var(--clients-border-color);
+}
+
+.team-sosial-link:hover,
+.team-sosial-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--hero-text-color);
 }
 
 /* ======Clients======= */
