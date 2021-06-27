@@ -147,9 +147,9 @@ img {
   margin-right: 50px;
 }
 
-.menu-link,
-.contact-link {
+.menu-link {
   display: block;
+
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -168,6 +168,18 @@ img {
 
 .contact-top-list .link {
   color: var(--primary-text-color);
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.contact-top-svg {
+  margin-right: 10px;
+
+  fill: currentColor;
 }
 
 /* ======Hero====== */
@@ -243,32 +255,21 @@ img {
   margin-bottom: 30px;
 }
 
-.basics-item::before {
-  margin-bottom: 30px;
-  display: block;
-  content: '';
+.basics-before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
   height: 120px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-bottom: 30px;
 
   background-color: var(--team-background-color);
+  border-radius: 4px;
 }
 
-.basics-item.icon-antenna::before {
-  background-image: url(../images/page1/antenna.svg);
-}
-
-.basics-item.icon-clock::before {
-  background-image: url(../images/page1/clock.svg);
-}
-
-.basics-item.icon-diagram::before {
-  background-image: url(../images/page1/diagram.svg);
-}
-
-.basics-item.icon-astronaut::before {
-  background-image: url(../images/page1/astronaut.svg);
+.basics-svg {
+  width: 70px;
+  height: 70px;
 }
 
 .basics-title {
@@ -349,16 +350,35 @@ img {
 }
 
 .clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-basis: calc((100% - 180px) / 6);
   margin-right: 30px;
   margin-bottom: 30px;
-
+}
+.clients-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
 
+  color: var(--clients-border-color);
   border: 1px solid var(--clients-border-color);
-  box-sizing: border-box;
   border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.clients-svg {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
 }
 
 /* ======Footer====== */
@@ -371,7 +391,7 @@ img {
 }
 
 .footer-logo {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
 
   font-family: var(--secondary-font);
