@@ -28,8 +28,13 @@
   --modal-button-shadow: rgba(0, 0, 0, 0.15);
   --modal-button-background: #188ce8;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --footer-sosial-background-color: rgba(255, 255, 255, 0.1);
   --progects-card-border: #eeeeee;
   --clients-border-color: #afb1b8;
+  --projects-focus-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  --btn-filter-focus-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .list {
@@ -343,13 +348,15 @@ img {
   margin-bottom: 10px;
 }
 
-.team-sosial-item {
-  display: inline-flex;
+.team-sosial-list {
+  display: flex;
+  justify-content: center;
 }
 
 .team-sosial-link {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
+
   align-items: center;
   width: 44px;
   height: 44px;
@@ -357,6 +364,10 @@ img {
   border-radius: 50px;
 
   fill: var(--clients-border-color);
+}
+
+.team-sosial-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .team-sosial-link:hover,
@@ -455,6 +466,29 @@ img {
 .footer-contact-item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-line {
+  display: flex;
+  align-items: baseline;
+}
+.footer-sosial-contacts {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+}
+.footer-sosial {
+  color: var(--hero-text-color);
+  margin-bottom: 20px;
+}
+
+.footer-sosial-link {
+  fill: var(--hero-text-color);
+  background-color: var(--footer-sosial-background-color);
+}
+
+.footer-sosial-link:hover,
+.footer-sosial-link:focus {
+  background-color: var(--accent-color);
+}
 
 /* =====Portfolio===== */
 
@@ -493,11 +527,13 @@ img {
 .btn-filter:focus {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
+  box-shadow: var(--btn-filter-focus-shadow);
 }
 
 .btn-filter.current {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
+  box-shadow: var(--btn-filter-focus-shadow);
 }
 
 /* ======Projects====== */
@@ -534,6 +570,11 @@ img {
   margin-left: 30px;
 }
 */
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: var(--projects-focus-shadow);
+}
+
 .projects-title {
   margin-bottom: 4px;
 
