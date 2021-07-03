@@ -570,8 +570,12 @@ img {
   margin-left: 30px;
 }
 */
-.projects-item:hover,
-.projects-item:focus {
+.projects-link {
+  display: block;
+}
+
+.projects-link:hover,
+.projects-link:focus {
   box-shadow: var(--projects-focus-shadow);
 }
 
